@@ -11,11 +11,21 @@ const Map = () => {
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
 
   const locations = [
-    { id: 1, name: "Student Center", building: "Building A", description: "Main hub for student activities" },
-    { id: 2, name: "Library", building: "Building B", description: "Main campus library with study spaces" },
-    { id: 3, name: "Science Building", building: "Building C", description: "Labs and classrooms for STEM" },
-    { id: 4, name: "Sports Complex", building: "Building D", description: "Gym, pool, and fitness facilities" },
-    { id: 5, name: "West Garden", building: "Building E", description: "Community garden and green space" },
+    { id: 1, name: "Student Center", building: "Building A, Main Level", description: "Main hub for student activities, dining, bookstore, and meeting rooms. Open 7am-11pm daily. Wheelchair accessible entrance on west side." },
+    { id: 2, name: "Library", building: "Building B, 4 Floors", description: "24/7 study spaces, 500+ computer workstations, quiet zones, group study rooms (reservable online), printing services, and research help desk. Accessible study carrels on floors 2-4." },
+    { id: 3, name: "Science Building", building: "Building C, East Campus", description: "State-of-the-art STEM labs, lecture halls, research facilities. Houses biology, chemistry, physics departments. Lab safety training required for access. Elevator access to all floors." },
+    { id: 4, name: "Sports Complex", building: "Building D, South Campus", description: "Olympic-size pool, basketball courts, indoor track, fitness center with cardio and weight equipment, yoga studio, and locker rooms. Free for students with ID. Accessible changing facilities available." },
+    { id: 5, name: "West Garden", building: "Outdoor Space, West Campus", description: "2-acre community garden with volunteer plots, greenhouse, composting area, and outdoor classroom. Sustainability Office located in adjacent shed. Paved accessible pathways throughout." },
+    { id: 6, name: "Arts & Humanities Hall", building: "Building F, North Campus", description: "Art studios, music practice rooms, theater, language labs, and faculty offices. Gallery hours: Mon-Fri 9am-5pm. Performance hall seats 400. Assistive listening devices available." },
+    { id: 7, name: "Engineering Lab", building: "Building G, East Campus", description: "Machine shop, 3D printing lab, robotics workspace, computer-aided design stations. Safety orientation required. Open project hours: weekdays 2-8pm. Ground floor fully accessible." },
+    { id: 8, name: "Medical Simulation Center", building: "Building H, Medical Campus", description: "Nursing and pre-med training with high-fidelity mannequins, simulated hospital rooms, and pharmacy lab. Restricted access for health sciences students. Wheelchair accessible throughout." },
+    { id: 9, name: "Food Pantry", building: "Student Center, Basement Level B-12", description: "Free groceries for students facing food insecurity. Open Thursday 3-6pm, Saturday 10am-1pm. Confidential service, no documentation required. Elevator access available." },
+    { id: 10, name: "Career Center", building: "Building J, Suite 300", description: "Resume help, interview prep, job postings, career counseling. Walk-in hours: Mon-Fri 1-4pm. Appointments recommended. Professional clothing closet. Fully accessible third floor location." },
+    { id: 11, name: "Health & Wellness Clinic", building: "Building K, First Floor", description: "Student health services, counseling center, health education. Hours: Mon-Fri 8am-5pm. After-hours nurse line available. Accepts student insurance. Accessible exam rooms and waiting area." },
+    { id: 12, name: "Residence Hall East", building: "Housing Complex, East Side", description: "400-bed residential hall with dining facility, study lounges, laundry. Front desk staffed 24/7. Quiet hours after 10pm. Accessible rooms available on all floors with elevator access." },
+    { id: 13, name: "Parking Structure", building: "Multi-level Garage, South Entrance", description: "1,200 spaces across 5 levels. Student permits required. Hourly visitor parking available. Electric vehicle charging stations on level 2. Accessible parking on all levels near elevators." },
+    { id: 14, name: "Campus Police & Safety", building: "Public Safety Building", description: "24/7 emergency response, lost & found, parking services, safety escorts. Emergency phones located throughout campus. Non-emergency: call extension 5555. Fully accessible facility." },
+    { id: 15, name: "Outdoor Amphitheater", building: "Central Quad, South End", description: "500-seat outdoor venue for concerts, lectures, and events. Accessible seating sections. Reserved for special events, open for study between events. Beautiful landscaping and shade trees." },
   ];
 
   const filteredLocations = locations.filter((loc) =>
@@ -128,14 +138,50 @@ const Map = () => {
                 </div>
               </Card>
 
-              <div className="mt-4 p-4 bg-secondary/50 rounded-lg">
-                <h3 className="font-semibold mb-2">Navigation Features</h3>
-                <ul className="space-y-1 text-sm text-muted-foreground">
-                  <li>• Turn-by-turn directions to all campus locations</li>
-                  <li>• Accessibility routes for wheelchair users</li>
-                  <li>• Real-time updates on building closures</li>
-                  <li>• Indoor navigation for major buildings</li>
-                </ul>
+              <div className="mt-4 space-y-4">
+                <div className="p-4 bg-secondary/50 rounded-lg">
+                  <h3 className="font-semibold mb-3 flex items-center gap-2">
+                    <Navigation className="h-5 w-5 text-accent" />
+                    Navigation Features
+                  </h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-0.5">•</span>
+                      <span>Turn-by-turn directions with estimated walk times</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-0.5">•</span>
+                      <span>Accessibility routes highlighting ramps, elevators, and automatic doors</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-0.5">•</span>
+                      <span>Real-time alerts for building closures and construction</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-0.5">•</span>
+                      <span>Indoor navigation for Library, Student Center, Science Building, and Medical Center</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-0.5">•</span>
+                      <span>Parking information with available spaces</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-0.5">•</span>
+                      <span>Emergency phone locations and safety escort pickup points</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="p-4 bg-primary/5 border border-primary/20 rounded-lg">
+                  <h3 className="font-semibold mb-2 text-sm">Campus Information</h3>
+                  <div className="space-y-1 text-xs text-muted-foreground">
+                    <p><strong>Total Campus Area:</strong> 300 acres</p>
+                    <p><strong>Buildings:</strong> 45 academic and support facilities</p>
+                    <p><strong>Parking:</strong> 3,500+ spaces across 8 lots</p>
+                    <p><strong>Emergency:</strong> Call 911 or campus extension 5555</p>
+                    <p><strong>Safety Escorts:</strong> Available 6pm-2am daily</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
