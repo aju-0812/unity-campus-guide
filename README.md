@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+Unity Campus Guide
+📘 Project Info
 
-## Project info
+This is a web application built using modern frontend technologies to create an interactive and visually appealing campus guide experience.
 
-**URL**: https://lovable.dev/projects/2245be3a-7bdf-4c81-b5b0-f7e49e5b017a
+🛠️ Technologies Used
 
-## How can I edit this code?
+Vite – Fast development build tool
 
-There are several ways of editing your application.
+React – Frontend library for building UI components
 
-**Use Lovable**
+TypeScript – Type-safe JavaScript for scalable development
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2245be3a-7bdf-4c81-b5b0-f7e49e5b017a) and start prompting.
+Tailwind CSS – Utility-first CSS framework for responsive design
 
-Changes made via Lovable will be committed automatically to this repo.
+shadcn-ui – Pre-built accessible UI components
 
-**Use your preferred IDE**
+🚀 Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Follow these steps to run the project locally:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+1️⃣ Clone the repository
 git clone https://github.com/aju-0812/unity-campus-guide.git
 
-# Step 2: Navigate to the project directory.
+2️⃣ Navigate to the project directory
 cd unity-campus-guide
 
-# Step 3: Install the necessary dependencies.
-npm i
+3️⃣ Install dependencies
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Make sure you have Node.js and npm installed.
+Then run:
+
+npm install
+
+4️⃣ Start the development server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Your app will start on the local development server (usually at http://localhost:5173).
 
-**Use GitHub Codespaces**
+💻 Editing the Project
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+You can edit the project using any preferred IDE such as VS Code, WebStorm, or Sublime Text.
+Modify components, pages, and styles as needed — changes will reflect instantly when using the dev server.
 
-## What technologies are used for this project?
+🌍 Deployment
 
-This project is built with:
+To deploy your project, you can use platforms like:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Vercel
 
-## How can I deploy this project?
+Netlify
 
-Simply open [Lovable](https://lovable.dev/projects/2245be3a-7bdf-4c81-b5b0-f7e49e5b017a) and click on Share -> Publish.
+GitHub Pages
 
-## Can I connect a custom domain to my Lovable project?
+Render
 
-Yes, you can!
+Each supports Vite + React deployments easily.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Example (Vercel):
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# Install Vercel CLI
+npm install -g vercel
+
+# Deploy
+vercel
+
+🔗 Custom Domain
+
+If you deploy using Vercel or Netlify, you can easily connect a custom domain through their settings dashboard.
+
+📄 License
+
+This project is open-source and available under the MIT License
+.
